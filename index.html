@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>MahaYuvaCon '24</title>
+    <title>Yuvamahacon '24</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" >
@@ -29,9 +29,9 @@
       <nav class="navbar navbar-expand-lg bg-inverse fixed-top scrolling-navbar">
         <div class="container">
           <!-- Brand and toggle get grouped for better mobile display -->
-          <a href="index.html" class="navbar-brand">
+          <a href="index.html" class="navbar-brand" style="color: #ff4d79;">
             <!-- <img src="assets/img/logo.png" alt=""> -->
-            MahaYuvaCon '24
+            Yuvamahacon '24
           </a>       
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <i class="lni-menu"></i>
@@ -54,8 +54,13 @@
                 </a>
               </li> -->
               <li class="nav-item">
-                <a class="nav-link" href="#team">
+                <a class="nav-link" href="#speakers">
                   Speakers
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#team">
+                  Members
                 </a>
               </li>
               <!-- <li class="nav-item">
@@ -65,7 +70,7 @@
               </li> -->
               <li class="nav-item">
                 <a class="nav-link" href="#pricing">
-                  pricing
+                  Registration
                 </a>
               </li>
               <!-- <li class="nav-item">
@@ -95,7 +100,7 @@
                   <i class="lni-mic"></i>
                 </div>
                 <p class="banner-info">GCC Hotel and Club Off Mira Bhayandar Road, 92/1, GCC Club Rd, Mira Road East, 401107</p>
-                <h2 class="head-title">MahaYuvaCon '24</h2>
+                <h2 class="head-title">Yuvamahacon '24</h2>
                 <p class="banner-desc">Encourage. Enlighten. Empower</p>
                 <div class="banner-btn">
                   <!-- <a href="#" class="btn btn-common">Get Ticket</a> -->
@@ -757,7 +762,7 @@
     Schedule Section End -->
 
     <!-- Team Section Start -->
-    <section id="team" class="section-padding text-center">
+    <section id="speakers" class="section-padding text-center">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -1208,8 +1213,8 @@
             <!-- Add more rows as needed -->
           </tbody>
         </table>
-        <div class="price-block-wrapper">
-          <button class="btn btn-common" data-toggle="modal" data-target="#exampleModal">Pay now</button>
+        <div class="price-block-wrapper" style="box-shadow: none; background: transparent;">
+          <button class="btn btn-common" data-toggle="modal" data-target="#payModal">Pay now</button>
           <!-- <a href="#" class="btn btn-common">Pay now</a> -->
         </div>
       </div>
@@ -1451,9 +1456,10 @@
                 </button>
               </form>
             </div> -->
-            <div class="footer-logo">
+            <div class="footer-logo" style="color: #ff4d79;">
               <!-- <img src="assets/img/logo.png" alt=""> -->
-              MahaYuvaCon '24
+              <br>
+              Yuvamahacon '24
             </div>
             <div class="social-icons-footer">
               <ul>
@@ -1497,27 +1503,48 @@
     </div>
 
     <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="payModal" tabindex="-1" role="dialog" aria-labelledby="payModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Account details</h5>
+        <h5 class="modal-title" id="payModalLabel">Account details</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <strong>Account name:</strong> <br>BORIVALI SOCIETY OF ANAESTHESIOLOGISTS BSA CME <br>
+        <table class="table table-striped">
+          <tbody>
+            <tr>
+              <th scope="row">Account name:</th>
+              <td>BORIVALI SOCIETY OF ANAESTHESIOLOGISTS BSA CME</td>
+            </tr>
+            <tr>
+              <th scope="row">Account number:</th>
+              <td>921020056611458</td>
+            </tr>
+            <tr>
+              <th scope="row">Branch:</th>
+              <td>Malad West</td>
+            </tr>
+            <tr>
+              <th scope="row">IFSC Code:</th>
+              <td>UTIB0000062</td>
+            </tr>
+            <!-- Add more rows as needed -->
+          </tbody>
+        </table>
+        <!-- <strong>Account name:</strong> <br>BORIVALI SOCIETY OF ANAESTHESIOLOGISTS BSA CME <br>
         <strong>Account number:</strong> 921020056611458 <br>
         <strong>Branch:</strong> Malad West <br>
-        <strong>IFSC CODE:</strong> UTIB0000062
+        <strong>IFSC CODE:</strong> UTIB0000062 -->
 
-        <br><br>
-        <i>After successful payment, fill the form to confirm your Registration.</i>
+        <br>
+        <i>After successful payment, please fill the form to confirm your registration</i>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Fill Form</button>
+        <button type="button" class="btn btn-common">Fill Form</button>
       </div>
     </div>
   </div>
