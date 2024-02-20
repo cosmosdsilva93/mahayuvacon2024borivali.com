@@ -46,7 +46,7 @@
 
 			.isa-main {
 				position: absolute;
-				top: 25px;
+				top: 3%;
 				left: 50%;
 				transform: translateX(-50%);
 				z-index: 10;
@@ -55,23 +55,23 @@
 
 			.dared {
 				position: absolute;
-				top: 30px;
-				left: 30px;
+				top: 3%;
+				left: 2%;
 				z-index: 10;
 				width: 9%;
 			}
 
 			.robin {
 				position: absolute;
-				top: 10px;
-				right: 30px;
+				top: 1%;
+				right: 2%;
 				z-index: 10;
 				width: 8%;
 			}
 
 			.mahayu {
 				position: absolute;
-				top: 200px;
+				top: 23%;
 				left: 50%;
 				transform: translateX(-50%);
 				z-index: 10;
@@ -80,7 +80,7 @@
 
 			.date {
 				position: absolute;
-				top: 340px;
+				top: 40%;
 				left: 50%;
 				transform: translateX(-50%);
 				z-index: 10;
@@ -88,11 +88,13 @@
 			}
 
 			.slider-container {
-				position: relative;
+				position: absolute;
 				max-width: 600px;
 				margin: auto;
-				top: 450px;
+				top: 55%;
+				left: 50%;
 				z-index: 10;
+				transform: translate(-50%, 0);
 			}
 
 			.slider {
@@ -158,8 +160,8 @@
 			}
 			.lectures {
 				position: absolute;
-				top: 250px;
-				left: 120px;
+				top: 30%;
+				left: 8%;
 				z-index: 13;
 				width: 25%;
 			}
@@ -181,7 +183,7 @@
 			}
 			.debates {
 				position: absolute;
-				top: 30px;
+				top: 3%;
 				left: 26%;
 				z-index: 12;
 				width: 20%;
@@ -348,27 +350,24 @@
 	<body>
 		<div id="a">
 			<img src="/assets/svg/bg.svg" alt="" />
-			<div class="inner-content">
-				<img class="isa-main" src="assets/svg/isa-main.svg" alt="" />
-				<img src="/assets/svg/dared.svg" alt="" class="dared" />
-				<img src="/assets/svg/robin.svg" alt="" class="robin" />
-				<img src="/assets/svg/mahayu.svg" alt="" class="mahayu" />
-				<img src="/assets/svg/date.svg" alt="" class="date" />
+			<!-- <div class="inner-content"> -->
+			<img class="isa-main" src="assets/svg/isa-main.svg" alt="" />
+			<img src="/assets/svg/dared.svg" alt="" class="dared" />
+			<img src="/assets/svg/robin.svg" alt="" class="robin" />
+			<img src="/assets/svg/mahayu.svg" alt="" class="mahayu" />
+			<img src="/assets/svg/date.svg" alt="" class="date" />
 
-				<div class="slider-container">
-					<div class="slider">
-						<img
-							src="/assets/img/gateway-of-india.webp"
-							alt="Gateway of India"
-						/>
-						<img src="/assets/img/hanging-garden.jpg" alt="Hanging Garden" />
-						<img src="/assets/img/powai-lake.webp" alt="Powai Lake" />
-						<img src="/assets/img/gcc-club.webp" alt="GCC Club" />
-					</div>
-					<button class="prev" onclick="prevSlide()">&lt;</button>
-					<button class="next" onclick="nextSlide()">&gt;</button>
+			<div class="slider-container">
+				<div class="slider">
+					<img src="/assets/img/gateway-of-india.webp" alt="Gateway of India" />
+					<img src="/assets/img/hanging-garden.jpg" alt="Hanging Garden" />
+					<img src="/assets/img/powai-lake.webp" alt="Powai Lake" />
+					<img src="/assets/img/gcc-club.webp" alt="GCC Club" />
 				</div>
+				<button class="prev" onclick="prevSlide()">&lt;</button>
+				<button class="next" onclick="nextSlide()">&gt;</button>
 			</div>
+			<!-- </div> -->
 		</div>
 		<div id="b">
 			<img src="/assets/svg/bg.svg" alt="" />
