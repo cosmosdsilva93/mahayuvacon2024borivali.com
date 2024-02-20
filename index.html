@@ -11,6 +11,9 @@
 				padding: 0;
 				outline: 0;
 			}
+			body {
+				overflow-x: hidden;
+			}
 
 			svg {
 				width: 100%;
@@ -22,19 +25,434 @@
 			}
 
 			div#b,
-			div#c {
+			div#c,
+			div#d {
 				margin-top: -6px;
+			}
+
+			div#a,
+			div#b,
+			div#c,
+			div#d {
+				position: relative;
+			}
+
+			.inner-content {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+			}
+
+			.isa-main {
+				position: absolute;
+				top: 25px;
+				left: 50%;
+				transform: translateX(-50%);
+				z-index: 10;
+				width: 75%;
+			}
+
+			.dared {
+				position: absolute;
+				top: 30px;
+				left: 30px;
+				z-index: 10;
+				width: 9%;
+			}
+
+			.robin {
+				position: absolute;
+				top: 10px;
+				right: 30px;
+				z-index: 10;
+				width: 8%;
+			}
+
+			.mahayu {
+				position: absolute;
+				top: 200px;
+				left: 50%;
+				transform: translateX(-50%);
+				z-index: 10;
+				width: 60%;
+			}
+
+			.date {
+				position: absolute;
+				top: 340px;
+				left: 50%;
+				transform: translateX(-50%);
+				z-index: 10;
+				width: 45%;
+			}
+
+			.slider-container {
+				position: relative;
+				max-width: 600px;
+				margin: auto;
+				top: 450px;
+				z-index: 10;
+			}
+
+			.slider {
+				display: flex;
+				overflow: hidden;
+			}
+
+			.slider img {
+				width: 100%;
+				transition: transform 0.5s ease;
+			}
+
+			.prev,
+			.next {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				padding: 10px 20px;
+				background-color: #333;
+				color: #fff;
+				border: none;
+				cursor: pointer;
+				opacity: 0.5;
+			}
+
+			.prev {
+				left: 0;
+			}
+
+			.next {
+				right: 0;
+			}
+
+			/* .cloud-o {
+				position: absolute;
+				width: 30%;
+				z-index: 12;
+				top: 0;
+				left: 0;
+			} */
+			.handson {
+				position: absolute;
+				width: 60%;
+				/* z-index: 13; */
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+			.workshop {
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 12;
+				width: 25%;
+			}
+			.interec {
+				position: absolute;
+				width: 60%;
+				/* z-index: 13; */
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+			.lectures {
+				position: absolute;
+				top: 250px;
+				left: 120px;
+				z-index: 13;
+				width: 25%;
+			}
+			.vs-cropped {
+				position: absolute;
+				width: 40%;
+				/* z-index: 13; */
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -35%);
+			}
+			.explos {
+				position: absolute;
+				width: 45%;
+				/* z-index: 13; */
+				top: 23%;
+				left: 50%;
+				transform: translate(-50%, 0);
+			}
+			.debates {
+				position: absolute;
+				top: 30px;
+				left: 26%;
+				z-index: 12;
+				width: 20%;
+			}
+			.quiz {
+				position: absolute;
+				width: 30%;
+				z-index: 14;
+				top: 20%;
+				left: 50%;
+				transform: translate(-37%, 0);
+			}
+			.doc {
+				position: absolute;
+				width: 18%;
+				z-index: 13;
+				top: 15%;
+				left: 70%;
+				transform: translate(-40%, 0);
+			}
+
+			.isaborivali {
+				position: absolute;
+				top: 5%;
+				left: 70%;
+				z-index: 12;
+				width: 35%;
+			}
+			.isaborivali p {
+				text-align: center;
+				color: #123db1;
+				font-weight: 800;
+				font-size: 17px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-40%, -60%);
+				font-family: "Brush Script MT", cursive;
+			}
+			a {
+				text-decoration: none;
+			}
+			.terms {
+				position: absolute;
+				top: 75%;
+				left: 7%;
+				width: 25%;
+				z-index: 14;
+			}
+			.pricing {
+				position: absolute;
+				top: 67%;
+				left: 36%;
+				width: 35%;
+				z-index: 14;
+			}
+			.registr {
+				position: absolute;
+				top: 60.5%;
+				left: 40.5%;
+				width: 27%;
+				z-index: 14;
+			}
+			.gift {
+				position: absolute;
+				top: 55%;
+				right: 12%;
+				z-index: 14;
+				width: 17%;
+			}
+			.assured {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -55%);
+				width: 55%;
+			}
+			.neft {
+				position: absolute;
+				top: 95%;
+				right: 5%;
+				z-index: 14;
+				width: 20%;
+				cursor: pointer;
+			}
+			.super {
+				position: absolute;
+				width: 18%;
+				bottom: -39%;
+				left: 52.5%;
+				transform: translate(-50%, 0);
+				z-index: 14;
+			}
+			.contact {
+				position: absolute;
+				bottom: -60%;
+				left: 54%;
+				transform: translate(-50%, 0);
+				z-index: 15;
+				width: 40%;
+			}
+			.contact p {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 85%;
+				transform: translate(-50%, -50%);
+				text-align: center;
+				font-family: Verdana, Geneva, Tahoma, sans-serif;
+				font-size: 14px;
+				color: #fff;
+			}
+			.members-2,
+			.members,
+			.orga {
+				position: absolute;
+				width: 27%;
+				z-index: 15;
+			}
+			.members-2 {
+				bottom: 0;
+				left: 5%;
+			}
+			.members {
+				bottom: -20%;
+				left: 50%;
+				transform: translate(-50%, 0);
+			}
+			.orga {
+				bottom: -15%;
+				right: 5%;
+			}
+			.links {
+				position: absolute;
+				bottom: 15%;
+				left: 5%;
+				text-align: center;
+				font-family: Verdana, Geneva, Tahoma, sans-serif;
+				/* font-size: 14px; */
+				color: #fff;
+			}
+			.links span a {
+				color: #fff;
+				font-weight: 500;
+			}
+
+			.accomodation {
+				position: absolute;
+				width: 30%;
+				bottom: 45%;
+				left: 5%;
+				z-index: 15;
+			}
+
+			.contact-acc {
+				position: absolute;
+				top: 45%;
+				left: 52%;
+				transform: translate(-50%, -50%);
+				width: 55%;
 			}
 		</style>
 	</head>
 	<body>
-		<!-- <div id="a"><img src="/assets/img/1.png" alt="" usemap="#image-map" /></div>
-		<div id="b"><img src="/assets/img/2.png" alt="" /></div>
-		<div id="c"><img src="/assets/img/3.png" alt="" /></div> -->
+		<div id="a">
+			<img src="/assets/svg/bg.svg" alt="" />
+			<div class="inner-content">
+				<img class="isa-main" src="assets/svg/isa-main.svg" alt="" />
+				<img src="/assets/svg/dared.svg" alt="" class="dared" />
+				<img src="/assets/svg/robin.svg" alt="" class="robin" />
+				<img src="/assets/svg/mahayu.svg" alt="" class="mahayu" />
+				<img src="/assets/svg/date.svg" alt="" class="date" />
 
-		<div id="a"></div>
+				<div class="slider-container">
+					<div class="slider">
+						<img
+							src="/assets/img/gateway-of-india.webp"
+							alt="Gateway of India"
+						/>
+						<img src="/assets/img/hanging-garden.jpg" alt="Hanging Garden" />
+						<img src="/assets/img/powai-lake.webp" alt="Powai Lake" />
+						<img src="/assets/img/gcc-club.webp" alt="GCC Club" />
+					</div>
+					<button class="prev" onclick="prevSlide()">&lt;</button>
+					<button class="next" onclick="nextSlide()">&gt;</button>
+				</div>
+			</div>
+		</div>
+		<div id="b">
+			<img src="/assets/svg/bg.svg" alt="" />
+			<div class="workshop">
+				<img src="/assets/svg/cloud-o.svg" alt="" class="cloud-o" />
+				<img src="/assets/svg/handson.svg" alt="" class="handson" />
+			</div>
+			<div class="lectures">
+				<img src="/assets/svg/cloud.svg" alt="" class="cloud" />
+				<img src="/assets/svg/interec.svg" alt="" class="interec" />
+			</div>
+			<div class="debates">
+				<img src="/assets/svg/boom.svg" alt="" class="boom" />
+				<img src="/assets/svg/vs-cropped.svg" alt="" class="vs-cropped" />
+				<img src="/assets/svg/explos.svg" alt="" class="explos" />
+			</div>
+			<img src="/assets/svg/quiz.svg" alt="" class="quiz" />
+			<img src="/assets/svg/doc.svg" alt="" class="doc" />
+			<div class="isaborivali">
+				<img src="/assets/svg/bang.svg" alt="" class="bang" />
+				<p>
+					SUBMIT ABSTRACT FOR <br />
+					PAPER/POSTER AT <br />
+					<a href="mailto:isaborivaliyuvamahacon@gmail.com"
+						>isaborivaliyuvamahacon@gmail.com</a
+					>
+				</p>
+			</div>
+			<img src="/assets/svg/terms.svg" alt="" class="terms" />
+			<img src="/assets/svg/pricing.svg" alt="" class="pricing" />
+			<img src="/assets/svg/registr.svg" alt="" class="registr" />
+			<div class="gift">
+				<img src="/assets/svg/smoke.svg" alt="" class="smoke" />
+				<img src="/assets/svg/assured.svg" alt="" class="assured" />
+			</div>
+			<img
+				src="/assets/svg/neft.svg"
+				alt=""
+				class="neft"
+				onclick="redirect_link('https://forms.gle/5gvvtSUzQQdELUwG7')"
+			/>
+			<img src="/assets/svg/super.svg" alt="" class="super" />
+			<div class="contact">
+				<img src="/assets/svg/sides.svg" alt="" class="sides" />
+				<p>FOR REGISTRATION RELATED QUERY CONTACT: LEENA - 8691999189</p>
+			</div>
+		</div>
+		<div id="c">
+			<img src="/assets/svg/bg.svg" alt="" />
+			<img src="/assets/svg/members-2.svg" alt="" class="members-2" />
+			<img src="/assets/svg/members.svg" alt="" class="members" />
+			<img src="/assets/svg/orga.svg" alt="" class="orga" />
+		</div>
+		<div id="d">
+			<img src="/assets/svg/bg.svg" alt="" />
+			<div class="accomodation">
+				<img src="/assets/svg/flash.svg" alt="" class="flash" />
+				<img src="/assets/svg/contact.svg" alt="" class="contact-acc" />
+			</div>
+			<div class="links">
+				<span
+					><a href="#" target="_blank" rel="noopener noreferrer"
+						>ABSTRACT SUBMISSION RULES</a
+					></span
+				><br /><br />
+				<span
+					><a href="/pages/terms.html" target="_blank" rel="noopener noreferrer"
+						>REGISTRATION TERMS AND CONDITIONS</a
+					></span
+				><br /><br />
+				<span
+					><a
+						href="/pages/refund-policy.html"
+						target="_blank"
+						rel="noopener noreferrer"
+						>REFUND POLICY</a
+					></span
+				>
+			</div>
+		</div>
+
+		<!-- <div id="a"></div>
 		<div id="b"></div>
-		<div id="c"></div>
+		<div id="c"></div> -->
 
 		<map name="image-map">
 			<!-- Define the clickable area and specify the coordinates -->
@@ -65,9 +483,34 @@
 
 			const svgKey = ["x", "a", "b", "c"];
 
-			for (let i = 1; i <= 3; i++) {
+			/* for (let i = 1; i <= 3; i++) {
 				load_svg(i, svgKey[i]);
+			} */
+
+			let slideIndex = 0;
+
+			function showSlide(n) {
+				const slides = document.querySelectorAll(".slider img");
+				if (n >= slides.length) {
+					slideIndex = 0;
+				}
+				if (n < 0) {
+					slideIndex = slides.length - 1;
+				}
+				for (let i = 0; i < slides.length; i++) {
+					slides[i].style.transform = `translateX(${-slideIndex * 100}%)`;
+				}
 			}
+
+			function nextSlide() {
+				showSlide(++slideIndex);
+			}
+
+			function prevSlide() {
+				showSlide(--slideIndex);
+			}
+
+			showSlide(slideIndex);
 		</script>
 	</body>
 </html>
