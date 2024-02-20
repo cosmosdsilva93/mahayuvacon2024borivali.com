@@ -198,8 +198,8 @@
 			}
 			.debates {
 				position: absolute;
-				top: 12%;
-				left: 26%;
+				top: -42%;
+				left: 4%;
 				z-index: 12;
 				width: 20%;
 			}
@@ -207,25 +207,25 @@
 				position: absolute;
 				width: 30%;
 				z-index: 14;
-				top: 20%;
+				top: 22%;
 				left: 50%;
-				transform: translate(-37%, 0);
+				transform: translate(-50%, 0);
 			}
 			.doc {
 				position: absolute;
 				width: 18%;
 				z-index: 13;
-				top: 15%;
-				left: 70%;
+				top: 55%;
+				left: 80%;
 				transform: translate(-40%, 0);
 			}
 
 			.isaborivali {
 				position: absolute;
-				top: 5%;
-				left: 70%;
+				top: 8%;
+				left: 68%;
 				z-index: 12;
-				width: 35%;
+				width: 32%;
 			}
 			/* .isaborivali p {
 				text-align: center;
@@ -263,22 +263,22 @@
 			}
 			.pricing {
 				position: absolute;
-				top: 67%;
+				top: 69%;
 				left: 36%;
 				width: 35%;
 				z-index: 14;
 			}
 			.registr {
 				position: absolute;
-				top: 60.5%;
+				top: 62.5%;
 				left: 40.5%;
 				width: 27%;
 				z-index: 14;
 			}
 			.gift {
 				position: absolute;
-				top: 55%;
-				right: 12%;
+				top: -35%;
+				right: 7%;
 				z-index: 14;
 				width: 17%;
 			}
@@ -300,7 +300,7 @@
 			.super {
 				position: absolute;
 				width: 18%;
-				bottom: -39%;
+				bottom: -40.5%;
 				left: 52.5%;
 				transform: translate(-50%, 0);
 				z-index: 14;
@@ -391,6 +391,18 @@
 				}
 			}
 
+			/* @media (max-width: 1250px) {
+				#timer {
+					bottom: -25% !important;
+				}
+			} */
+			@media (max-width: 1100px) {
+				#timer {
+					font-size: 34px !important;
+					/* bottom: -25% !important; */
+				}
+			}
+
 			@media (max-width: 1000px) {
 				.slider-container {
 					max-width: 450px;
@@ -398,6 +410,9 @@
 				.slider img {
 					width: 450px;
 				}
+				/* #timer {
+					font-size: 24px;
+				} */
 			}
 
 			@media (max-width: 912px) {
@@ -418,6 +433,12 @@
 				}
 				.slider img {
 					width: 300px;
+				}
+			}
+
+			@media (max-width: 730px) {
+				#timer {
+					font-size: 21px !important;
 				}
 			}
 
@@ -473,6 +494,26 @@
 				left: 67%;
 				width: 25%;
 			}
+			.venue {
+				position: absolute;
+				bottom: 18%;
+				left: 15%;
+				width: 16%;
+			}
+			#timer {
+				position: absolute;
+				bottom: -20%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				z-index: 12;
+				font-size: 42px;
+				color: #fff;
+				font-family: Verdana, Geneva, Tahoma, sans-serif;
+				font-weight: 800;
+				text-shadow: -2px -3px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+					1px 1px 0 black;
+				/* text-shadow: -2px -3px 0 black; */
+			}
 		</style>
 	</head>
 	<body>
@@ -494,10 +535,12 @@
 					<img src="/assets/img/hanging-garden.jpg" alt="Hanging Garden" />
 					<img src="/assets/img/powai-lake.webp" alt="Powai Lake" />
 					<img src="/assets/img/gcc-club.webp" alt="GCC Club" />
+					<img src="/assets/img/cpr.jpg" alt="CPR" />
 				</div>
 				<button class="prev" onclick="prevSlide()">&lt;</button>
 				<button class="next" onclick="nextSlide()">&gt;</button>
 			</div>
+			<div id="timer"></div>
 
 			<!-- <div class="slider-container"> -->
 			<!-- <div class="bxslider">
@@ -581,8 +624,9 @@
 				<img src="/assets/svg/flash.svg" alt="" class="flash" />
 				<img src="/assets/svg/contact.svg" alt="" class="contact-acc" />
 			</div>
-			<img src="/assets/svg/more-1.svg" alt="" class="more-1" />
+			<img src="/assets/svg/more-1.png" alt="" class="more-1" />
 			<img src="/assets/svg/priyad.svg" alt="" class="priyad" />
+			<img src="/assets/svg/venue.svg" alt="" class="venue" />
 			<div class="links">
 				<span
 					><a href="#" target="_blank" rel="noopener noreferrer"
@@ -683,6 +727,42 @@
 			}
 
 			setInterval(autoSlide, 2000);
+
+			// Set the target date and time for the countdown (in UTC milliseconds)
+			const targetDate = new Date("2024-08-03T00:00:00+05:30").getTime();
+
+			// Update the countdown every second
+			const timerInterval = setInterval(updateCountdown, 1000);
+
+			function updateCountdown() {
+				// Get the current date and time (in UTC milliseconds)
+				const now = new Date().getTime();
+
+				// Calculate the remaining time in milliseconds
+				const remainingTime = targetDate - now;
+
+				// Check if the countdown has ended
+				if (remainingTime <= 0) {
+					clearInterval(timerInterval); // Stop the countdown timer
+					document.getElementById("timer").innerHTML = "Wait is over!";
+					return;
+				}
+
+				// Convert remaining time from milliseconds to days, hours, minutes, and seconds
+				const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+				const hours = Math.floor(
+					(remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+				);
+				const minutes = Math.floor(
+					(remainingTime % (1000 * 60 * 60)) / (1000 * 60)
+				);
+				const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+
+				// Display the remaining time in the HTML element
+				document.getElementById(
+					"timer"
+				).innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+			}
 
 			// $(".bxslider").bxSlider({
 			// 	auto: true,
