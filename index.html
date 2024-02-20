@@ -100,6 +100,7 @@
 				left: 50%;
 				z-index: 10;
 				transform: translate(-50%, 0);
+				border: 3px solid #fff;
 			}
 
 			/* .bx-wrapper {
@@ -427,10 +428,10 @@
 
 			@media (max-width: 500px) {
 				.slider-container {
-					max-width: 220px;
+					max-width: 200px;
 				}
 				.slider img {
-					width: 220px;
+					width: 200px;
 				}
 			}
 
@@ -459,14 +460,6 @@
 		<div class="loader" id="loader">
 			<img src="/assets/svg/loader.svg" alt="Loading..." />
 		</div>
-		<script>
-			function hideLoader() {
-				document.getElementById("loader").style.display = "none";
-			}
-
-			// Add event listener for when all images are loaded
-			window.addEventListener("load", hideLoader);
-		</script>
 		<div id="a">
 			<img src="/assets/svg/bg.svg" alt="" />
 			<!-- <div class="inner-content"> -->
@@ -595,37 +588,44 @@
 		<div id="b"></div>
 		<div id="c"></div> -->
 
-		<map name="image-map">
-			<!-- Define the clickable area and specify the coordinates -->
+		<!-- <map name="image-map">
 			<area
 				shape="rect"
 				coords="996,580,1196,600"
 				href="https://www.isaborivali.com"
 				alt="Clickable Area"
 			/>
-		</map>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+		</map> -->
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script> -->
+		<script>
+			function hideLoader() {
+				document.getElementById("loader").style.display = "none";
+			}
+
+			// Add event listener for when all images are loaded
+			window.addEventListener("load", hideLoader);
+		</script>
 		<script>
 			// Function to hide the loader when all images are loaded
 			let redirect_link = (url) => {
 				location.href = url;
 			};
 
-			const load_svg = (i, k) => {
-				fetch("/assets/svg/" + i + ".svg")
-					.then((response) => response.text())
-					.then((svgContent) => {
-						// Do something with the SVG content, like inserting it into the DOM
-						const svgElement = document.getElementById(k);
-						svgElement.innerHTML = svgContent;
-					})
-					.catch((error) => {
-						console.error("Error fetching SVG file:", error);
-					});
-			};
+			// const load_svg = (i, k) => {
+			// 	fetch("/assets/svg/" + i + ".svg")
+			// 		.then((response) => response.text())
+			// 		.then((svgContent) => {
+			// 			// Do something with the SVG content, like inserting it into the DOM
+			// 			const svgElement = document.getElementById(k);
+			// 			svgElement.innerHTML = svgContent;
+			// 		})
+			// 		.catch((error) => {
+			// 			console.error("Error fetching SVG file:", error);
+			// 		});
+			// };
 
-			const svgKey = ["x", "a", "b", "c"];
+			// const svgKey = ["x", "a", "b", "c"];
 
 			/* for (let i = 1; i <= 3; i++) {
 				load_svg(i, svgKey[i]);
@@ -657,13 +657,19 @@
 
 			showSlide(slideIndex);
 
-			$(".bxslider").bxSlider({
-				auto: true,
-				autoControls: true,
-				stopAutoOnClick: true,
-				pager: true,
-				slideWidth: 600,
-			});
+			function autoSlide() {
+				nextSlide();
+			}
+
+			setInterval(autoSlide, 2000);
+
+			// $(".bxslider").bxSlider({
+			// 	auto: true,
+			// 	autoControls: true,
+			// 	stopAutoOnClick: true,
+			// 	pager: true,
+			// 	slideWidth: 600,
+			// });
 
 			// document.querySelectorAll("div#a .bx-wrapper")[0].style.maxWidth =
 			// 	"600px";
