@@ -212,7 +212,7 @@
 				z-index: 12;
 				width: 35%;
 			}
-			.isaborivali p {
+			/* .isaborivali p {
 				text-align: center;
 				color: #123db1;
 				font-weight: 800;
@@ -222,6 +222,19 @@
 				left: 50%;
 				transform: translate(-40%, -60%);
 				font-family: "Brush Script MT", cursive;
+			} */
+			.submit {
+				/* text-align: center;
+				color: #123db1;
+				font-weight: 800;
+				font-size: 17px; */
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 50%;
+				transform: translate(-43%, -60%);
+				/* font-family: "Brush Script MT", cursive; */
+				cursor: pointer;
 			}
 			a {
 				text-decoration: none;
@@ -285,7 +298,7 @@
 				z-index: 15;
 				width: 40%;
 			}
-			.contact p {
+			/* .contact p {
 				position: absolute;
 				top: 50%;
 				left: 50%;
@@ -295,6 +308,13 @@
 				font-family: Verdana, Geneva, Tahoma, sans-serif;
 				font-size: 14px;
 				color: #fff;
+			} */
+			.contact-num {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 85%;
+				transform: translate(-50%, -50%);
 			}
 			.members-2,
 			.members,
@@ -318,11 +338,11 @@
 			}
 			.links {
 				position: absolute;
-				bottom: 15%;
+				bottom: 14%;
 				left: 5%;
 				text-align: center;
 				font-family: Verdana, Geneva, Tahoma, sans-serif;
-				/* font-size: 14px; */
+				font-size: 14px;
 				color: #fff;
 			}
 			.links span a {
@@ -388,13 +408,19 @@
 			<img src="/assets/svg/doc.svg" alt="" class="doc" />
 			<div class="isaborivali">
 				<img src="/assets/svg/bang.svg" alt="" class="bang" />
-				<p>
+				<!-- <p>
 					SUBMIT ABSTRACT FOR <br />
 					PAPER/POSTER AT <br />
 					<a href="mailto:isaborivaliyuvamahacon@gmail.com"
 						>isaborivaliyuvamahacon@gmail.com</a
 					>
-				</p>
+				</p> -->
+				<img
+					src="/assets/svg/submit.svg"
+					alt=""
+					class="submit"
+					onclick="redirect_link('mailto:isaborivaliyuvamahacon@gmail.com')"
+				/>
 			</div>
 			<img src="/assets/svg/terms.svg" alt="" class="terms" />
 			<img src="/assets/svg/pricing.svg" alt="" class="pricing" />
@@ -412,7 +438,8 @@
 			<img src="/assets/svg/super.svg" alt="" class="super" />
 			<div class="contact">
 				<img src="/assets/svg/sides.svg" alt="" class="sides" />
-				<p>FOR REGISTRATION RELATED QUERY CONTACT: LEENA - 8691999189</p>
+				<!-- <p>FOR REGISTRATION RELATED QUERY CONTACT: LEENA - 8691999189</p> -->
+				<img src="/assets/svg/contact-num.png" alt="" class="contact-num" />
 			</div>
 		</div>
 		<div id="c">
