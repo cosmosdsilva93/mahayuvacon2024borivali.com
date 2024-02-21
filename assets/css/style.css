@@ -1,0 +1,32 @@
+body {
+    background-image: url('../img/bg.svg');
+    background-size: cover; /* Cover the entire background */
+    
+    height: 100vh; /* Set the height of the body to full viewport height */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+#event-name{
+    width: 70%;
+}
+
+#event-dates{
+    width: 50%;
+    padding-top: 2%;
+}
+
+@media (max-width: 767px) {
+    body {
+        background-position: center center; /* Center the background image */
+    }
+    .nav-side-elems {
+        display: none;
+    }
+
+    #event-name,#event-dates{
+        padding-top: 5%;
+        width: 100%;
+    }
+
+}

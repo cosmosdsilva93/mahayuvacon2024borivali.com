@@ -1,792 +1,101 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Yuvamahacon '24</title>
 
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"
-		/>
+<head>
+	<title>Title</title>
+	<!-- Required meta tags -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-		<style>
-			* {
-				margin: 0;
-				padding: 0;
-				outline: 0;
-			}
-			body {
-				overflow-x: hidden;
-			}
+	<!-- Bootstrap CSS v5.2.1 -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+	<link rel="stylesheet" href="./assets/css/style.css">
+</head>
 
-			svg {
-				width: 100%;
-				height: auto;
-			}
-
-			img {
-				width: 100%;
-			}
-
-			div#b,
-			div#c,
-			div#d {
-				margin-top: -6px;
-			}
-
-			div#a,
-			div#b,
-			div#c,
-			div#d {
-				position: relative;
-			}
-
-			.inner-content {
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-			}
-
-			.isa-main {
-				position: absolute;
-				top: 3%;
-				left: 50%;
-				transform: translateX(-50%);
-				z-index: 10;
-				width: 75%;
-			}
-
-			.dared {
-				position: absolute;
-				top: 3%;
-				left: 2%;
-				z-index: 10;
-				width: 9%;
-			}
-
-			.robin {
-				position: absolute;
-				top: 1%;
-				right: 2%;
-				z-index: 10;
-				width: 8%;
-			}
-
-			.mahayu {
-				position: absolute;
-				top: 22%;
-				left: 50%;
-				transform: translateX(-50%);
-				z-index: 10;
-				width: 60%;
-			}
-
-			.date {
-				position: absolute;
-				top: 39%;
-				left: 50%;
-				transform: translateX(-50%);
-				z-index: 10;
-				width: 45%;
-			}
-
-			.slider-container {
-				position: absolute;
-				max-width: 600px;
-				margin: auto;
-				top: 52%;
-				left: 50%;
-				z-index: 10;
-				transform: translate(-50%, 0);
-				border: 3px solid #fff;
-			}
-
-			/* .bx-wrapper {
-				max-width: 600px;
-				position: absolute;
-				z-index: 10;
-				top: 52%;
-				left: 50%;
-				transform: translate(-50%, 0);
-			} */
-
-			.slider {
-				display: flex;
-				overflow: hidden;
-			}
-
-			.slider img {
-				width: 600px;
-				transition: transform 0.5s ease;
-			}
-
-			.prev,
-			.next {
-				position: absolute;
-				top: 50%;
-				transform: translateY(-50%);
-				padding: 10px 20px;
-				background-color: #333;
-				color: #fff;
-				border: none;
-				cursor: pointer;
-				opacity: 0.5;
-			}
-
-			.prev {
-				left: 0;
-			}
-
-			.next {
-				right: 0;
-			}
-
-			/* .cloud-o {
-				position: absolute;
-				width: 30%;
-				z-index: 12;
-				top: 0;
-				left: 0;
-			} */
-			.handson {
-				position: absolute;
-				width: 60%;
-				/* z-index: 13; */
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-			}
-			.workshop {
-				position: absolute;
-				top: 8%;
-				left: 0;
-				z-index: 12;
-				width: 25%;
-			}
-			.interec {
-				position: absolute;
-				width: 60%;
-				/* z-index: 13; */
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-			}
-			.lectures {
-				position: absolute;
-				top: 39%;
-				left: 8%;
-				z-index: 13;
-				width: 25%;
-			}
-			.vs-cropped {
-				position: absolute;
-				width: 40%;
-				/* z-index: 13; */
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -35%);
-			}
-			.explos {
-				position: absolute;
-				width: 45%;
-				/* z-index: 13; */
-				top: 23%;
-				left: 50%;
-				transform: translate(-50%, 0);
-			}
-			.debates {
-				position: absolute;
-				top: -42%;
-				left: 4%;
-				z-index: 12;
-				width: 20%;
-			}
-			.quiz {
-				position: absolute;
-				width: 30%;
-				z-index: 14;
-				top: 22%;
-				left: 50%;
-				transform: translate(-50%, 0);
-			}
-			.doc {
-				position: absolute;
-				width: 18%;
-				z-index: 13;
-				top: 55%;
-				left: 80%;
-				transform: translate(-40%, 0);
-			}
-
-			.isaborivali {
-				position: absolute;
-				top: 8%;
-				left: 68%;
-				z-index: 12;
-				width: 32%;
-			}
-			/* .isaborivali p {
-				text-align: center;
-				color: #123db1;
-				font-weight: 800;
-				font-size: 17px;
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-40%, -60%);
-				font-family: "Brush Script MT", cursive;
-			} */
-			.submit {
-				/* text-align: center;
-				color: #123db1;
-				font-weight: 800;
-				font-size: 17px; */
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				width: 50%;
-				transform: translate(-43%, -60%);
-				/* font-family: "Brush Script MT", cursive; */
-				cursor: pointer;
-			}
-			a {
-				text-decoration: none;
-			}
-			.terms {
-				position: absolute;
-				top: 75%;
-				left: 7%;
-				width: 25%;
-				z-index: 14;
-			}
-			.pricing {
-				position: absolute;
-				top: 69%;
-				left: 36%;
-				width: 35%;
-				z-index: 14;
-			}
-			.registr {
-				position: absolute;
-				top: 62.5%;
-				left: 40.5%;
-				width: 27%;
-				z-index: 14;
-			}
-			.gift {
-				position: absolute;
-				top: -35%;
-				right: 7%;
-				z-index: 14;
-				width: 17%;
-			}
-			.assured {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -55%);
-				width: 55%;
-			}
-			.neft {
-				position: absolute;
-				top: 95%;
-				right: 5%;
-				z-index: 14;
-				width: 20%;
-				cursor: pointer;
-			}
-			.super {
-				position: absolute;
-				width: 18%;
-				bottom: -40.5%;
-				left: 52.5%;
-				transform: translate(-50%, 0);
-				z-index: 14;
-			}
-			.contact {
-				position: absolute;
-				bottom: -60%;
-				left: 54%;
-				transform: translate(-50%, 0);
-				z-index: 15;
-				width: 40%;
-			}
-			/* .contact p {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				width: 85%;
-				transform: translate(-50%, -50%);
-				text-align: center;
-				font-family: Verdana, Geneva, Tahoma, sans-serif;
-				font-size: 14px;
-				color: #fff;
-			} */
-			.contact-num {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				width: 85%;
-				transform: translate(-50%, -50%);
-			}
-			.members-2,
-			.members,
-			.orga {
-				position: absolute;
-				width: 27%;
-				z-index: 15;
-			}
-			.members-2 {
-				bottom: 0;
-				left: 5%;
-			}
-			.members {
-				bottom: -20%;
-				left: 50%;
-				transform: translate(-50%, 0);
-			}
-			.orga {
-				bottom: -15%;
-				right: 5%;
-			}
-			.links {
-				position: absolute;
-				bottom: 10%;
-				left: 50%;
-				transform: translateX(-50%);
-				text-align: center;
-				font-family: Verdana, Geneva, Tahoma, sans-serif;
-				font-size: 13px;
-				color: #fff;
-			}
-			.links span a {
-				color: #fff;
-				font-weight: 500;
-			}
-
-			.accomodation {
-				position: absolute;
-				width: 30%;
-				bottom: 45%;
-				left: 5%;
-				z-index: 15;
-			}
-
-			.contact-acc {
-				position: absolute;
-				top: 45%;
-				left: 52%;
-				transform: translate(-50%, -50%);
-				width: 55%;
-			}
-
-			@media (max-width: 1200px) {
-				.slider-container {
-					max-width: 500px;
-				}
-				.slider img {
-					width: 500px;
-				}
-			}
-
-			/* @media (max-width: 1250px) {
-				#timer {
-					bottom: -25% !important;
-				}
-			} */
-			@media (max-width: 1100px) {
-				#timer {
-					font-size: 34px !important;
-					/* bottom: -25% !important; */
-				}
-			}
-
-			@media (max-width: 1000px) {
-				.slider-container {
-					max-width: 450px;
-				}
-				.slider img {
-					width: 450px;
-				}
-				/* #timer {
-					font-size: 24px;
-				} */
-			}
-
-			@media (max-width: 912px) {
-				.slider-container {
-					max-width: 400px;
-				}
-				.slider img {
-					width: 400px;
-				}
-				.links {
-					font-size: 10px;
-				}
-			}
-
-			@media (max-width: 820px) {
-				.slider-container {
-					max-width: 300px;
-				}
-				.slider img {
-					width: 300px;
-				}
-			}
-
-			@media (max-width: 730px) {
-				#timer {
-					font-size: 21px !important;
-				}
-			}
-
-			@media (max-width: 624px) {
-				.slider-container {
-					max-width: 240px;
-				}
-				.slider img {
-					width: 240px;
-				}
-				.links {
-					font-size: 8px;
-				}
-			}
-
-			@media (max-width: 500px) {
-				.slider-container {
-					max-width: 200px;
-				}
-				.slider img {
-					width: 200px;
-				}
-
-				#timer {
-					bottom: -23% !important;
-					font-size: 8px !important;
-					text-shadow: none !important;
-				}
-			}
-
-			/* Styling for the loader */
-			.loader {
-				display: block;
-				position: fixed;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				background: rgba(255, 255, 255, 1);
-				z-index: 9999;
-			}
-
-			.loader img {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				width: 10%;
-			}
-			.more-1 {
-				position: absolute;
-				bottom: 35%;
-				left: 40%;
-				width: 20%;
-			}
-			.priyad {
-				position: absolute;
-				bottom: 42%;
-				left: 67%;
-				width: 25%;
-			}
-			.venue {
-				position: absolute;
-				bottom: 18%;
-				left: 15%;
-				width: 16%;
-			}
-			#timer {
-				position: absolute;
-				bottom: -20%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				z-index: 12;
-				font-size: 42px;
-				color: #fff;
-				font-family: Verdana, Geneva, Tahoma, sans-serif;
-				font-weight: 800;
-				text-shadow: -2px -3px 0 black, 1px -1px 0 black, -1px 1px 0 black,
-					1px 1px 0 black;
-				/* text-shadow: -2px -3px 0 black; */
-			}
-		</style>
-	</head>
-	<body>
-		<div class="loader" id="loader">
-			<img src="/assets/svg/loader.svg" alt="Loading..." />
-		</div>
-		<div id="a">
-			<img src="/assets/svg/bg.svg" alt="" />
-			<!-- <div class="inner-content"> -->
-			<img class="isa-main" src="assets/svg/isa-main.svg" alt="" />
-			<img src="/assets/svg/dared.svg" alt="" class="dared" />
-			<img src="/assets/svg/robin.svg" alt="" class="robin" />
-			<img src="/assets/svg/mahayu.svg" alt="" class="mahayu" />
-			<img src="/assets/svg/date.svg" alt="" class="date" />
-
-			<div class="slider-container">
-				<div class="slider">
-					<img src="/assets/img/gateway-of-india.webp" alt="Gateway of India" />
-					<img src="/assets/img/hanging-garden.jpg" alt="Hanging Garden" />
-					<img src="/assets/img/powai-lake.webp" alt="Powai Lake" />
-					<img src="/assets/img/gcc-club.webp" alt="GCC Club" />
-					<img src="/assets/img/cpr.jpg" alt="CPR" />
+<body>
+	<header>
+		<!-- place navbar here -->
+	</header>
+	<main>
+		<div class="custom-nav">
+			<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light"> -->
+			<!-- <div class="container-fluid"> -->
+			<div class="row">
+				<div class="col-lg-2 col-md-2">
+					<img src="./assets/img/nav/dared.svg" class="align-top float-end nav-side-elems" style="width:65%">
 				</div>
-				<button class="prev" onclick="prevSlide()">&lt;</button>
-				<button class="next" onclick="nextSlide()">&gt;</button>
+				<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+					<img src="./assets/img/nav/isa-main.svg" class="d-inline-block align-top" style="width: 100%">
+				</div>
+				<div class="col-lg-2 col-md-2">
+					<img src="./assets/img/nav/robin.svg" class="align-top float-start nav-side-elems"
+						style="width: 45%;">
+				</div>
 			</div>
-			<div id="timer"></div>
-
-			<!-- <div class="slider-container"> -->
-			<!-- <div class="bxslider">
-					<div>
-						<img
-							src="/assets/img/gateway-of-india.webp"
-							alt="Gateway of India"
-						/>
+		</div>
+		<!-- </nav> -->
+		<div class="container">
+			<div class="row" align="center">
+				<div class="col-md-12">
+					<img src="./assets/img/event/mahayu.svg" id="event-name" class="d-inline-block">
+				</div>
+				<div class="col-md-12">
+					<img src="./assets/img/event/date.svg" id="event-dates" class="d-inline-block">
+				</div>
+			</div>
+			<div class="row" id="carousel">
+				<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+					<div class="carousel-indicators">
+						<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+							class="active" aria-current="true" aria-label="Slide 1"></button>
+						<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+							aria-label="Slide 2"></button>
+						<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+							aria-label="Slide 3"></button>
 					</div>
-					<div>
-						<img src="/assets/img/hanging-garden.jpg" alt="Hanging Garden" />
+					<div class="carousel-inner">
+						<div class="carousel-item active" align="center">
+							<img src="./assets/img/carousel/cpr.jpg" class="d-block" alt="..." width="600px">
+						</div>
+						<div class="carousel-item" align="center">
+							<img src="./assets/img/carousel/gateway-of-india.webp" class="d-block" alt="..." width="600px">
+						</div>
+						<div class="carousel-item" align="center">
+							<img src="./assets/img/carousel/gcc-club.webp" class="d-block" alt="..." width="600px">
+						</div>
+						<div class="carousel-item" align="center">
+							<img src="./assets/img/carousel/hanging-garden.jpg" class="d-block" alt="..." width="600px">
+						</div>
+						<div class="carousel-item" align="center">
+							<img src="./assets/img/carousel/powai-lake.webp" class="d-block" alt="..." width="600px">
+						</div>
 					</div>
-					<div><img src="/assets/img/powai-lake.webp" alt="Powai Lake" /></div>
-					<div><img src="/assets/img/gcc-club.webp" alt="GCC Club" /></div>
-				</div> -->
-			<!-- </div> -->
-			<!-- </div> -->
-		</div>
-		<div id="b">
-			<img src="/assets/svg/bg.svg" alt="" />
-			<div class="workshop">
-				<img src="/assets/svg/cloud-o.svg" alt="" class="cloud-o" />
-				<img src="/assets/svg/handson.svg" alt="" class="handson" />
-			</div>
-			<div class="lectures">
-				<img src="/assets/svg/cloud.svg" alt="" class="cloud" />
-				<img src="/assets/svg/interec.svg" alt="" class="interec" />
-			</div>
-			<div class="debates">
-				<img src="/assets/svg/boom.svg" alt="" class="boom" />
-				<img src="/assets/svg/vs-cropped.svg" alt="" class="vs-cropped" />
-				<img src="/assets/svg/explos.svg" alt="" class="explos" />
-			</div>
-			<img src="/assets/svg/quiz-2.svg" alt="" class="quiz" />
-			<img src="/assets/svg/doc.svg" alt="" class="doc" />
-			<div class="isaborivali">
-				<img src="/assets/svg/bang.svg" alt="" class="bang" />
-				<!-- <p>
-					SUBMIT ABSTRACT FOR <br />
-					PAPER/POSTER AT <br />
-					<a href="mailto:isaborivaliyuvamahacon@gmail.com"
-						>isaborivaliyuvamahacon@gmail.com</a
-					>
-				</p> -->
-				<img
-					src="/assets/svg/submit.svg"
-					alt=""
-					class="submit"
-					onclick="redirect_link('mailto:isaborivaliyuvamahacon@gmail.com')"
-				/>
-			</div>
-			<img src="/assets/svg/terms.svg" alt="" class="terms" />
-			<img src="/assets/svg/pricing.svg" alt="" class="pricing" />
-			<img src="/assets/svg/registr.svg" alt="" class="registr" />
-			<div class="gift">
-				<img src="/assets/svg/smoke.svg" alt="" class="smoke" />
-				<img src="/assets/svg/assured.svg" alt="" class="assured" />
-			</div>
-			<img
-				src="/assets/svg/neft.svg"
-				alt=""
-				class="neft"
-				onclick="redirect_link('https://forms.gle/5gvvtSUzQQdELUwG7')"
-			/>
-			<img src="/assets/svg/super.svg" alt="" class="super" />
-			<div class="contact">
-				<img src="/assets/svg/sides.svg" alt="" class="sides" />
-				<!-- <p>FOR REGISTRATION RELATED QUERY CONTACT: LEENA - 8691999189</p> -->
-				<img src="/assets/svg/contact-num.png" alt="" class="contact-num" />
+					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+						data-bs-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+						data-bs-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>
+				</div>
 			</div>
 		</div>
-		<div id="c">
-			<img src="/assets/svg/bg.svg" alt="" />
-			<img src="/assets/svg/members-2.svg" alt="" class="members-2" />
-			<img src="/assets/svg/members.svg" alt="" class="members" />
-			<img src="/assets/svg/orga.svg" alt="" class="orga" />
-		</div>
-		<div id="d">
-			<img src="/assets/svg/bg.svg" alt="" />
-			<div class="accomodation">
-				<img src="/assets/svg/flash.svg" alt="" class="flash" />
-				<img src="/assets/svg/contact.svg" alt="" class="contact-acc" />
-			</div>
-			<img src="/assets/svg/more-1.png" alt="" class="more-1" />
-			<img src="/assets/svg/priyad.svg" alt="" class="priyad" />
-			<img src="/assets/svg/venue.png" alt="" class="venue" />
-			<div class="links">
-				<span
-					><a href="#" target="_blank" rel="noopener noreferrer"
-						>ABSTRACT SUBMISSION RULES</a
-					></span
-				><br /><br />
-				<span
-					><a href="/pages/terms.html" target="_blank" rel="noopener noreferrer"
-						>REGISTRATION TERMS AND CONDITIONS</a
-					></span
-				><br /><br />
-				<span
-					><a
-						href="/pages/refund-policy.html"
-						target="_blank"
-						rel="noopener noreferrer"
-						>REFUND POLICY</a
-					></span
-				>
-			</div>
-		</div>
+	</main>
+	<footer>
+		<!-- place footer here -->
+	</footer>
+	<!-- Bootstrap JavaScript Libraries -->
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+		integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+		crossorigin="anonymous"></script>
 
-		<!-- <div id="a"></div>
-		<div id="b"></div>
-		<div id="c"></div> -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+		integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+		crossorigin="anonymous"></script>
+</body>
 
-		<!-- <map name="image-map">
-			<area
-				shape="rect"
-				coords="996,580,1196,600"
-				href="https://www.isaborivali.com"
-				alt="Clickable Area"
-			/>
-		</map> -->
-		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script> -->
-		<script>
-			function hideLoader() {
-				document.getElementById("loader").style.display = "none";
-			}
-
-			// Add event listener for when all images are loaded
-			window.addEventListener("load", hideLoader);
-		</script>
-		<script>
-			// Function to hide the loader when all images are loaded
-			let redirect_link = (url) => {
-				location.href = url;
-			};
-
-			// const load_svg = (i, k) => {
-			// 	fetch("/assets/svg/" + i + ".svg")
-			// 		.then((response) => response.text())
-			// 		.then((svgContent) => {
-			// 			// Do something with the SVG content, like inserting it into the DOM
-			// 			const svgElement = document.getElementById(k);
-			// 			svgElement.innerHTML = svgContent;
-			// 		})
-			// 		.catch((error) => {
-			// 			console.error("Error fetching SVG file:", error);
-			// 		});
-			// };
-
-			// const svgKey = ["x", "a", "b", "c"];
-
-			/* for (let i = 1; i <= 3; i++) {
-				load_svg(i, svgKey[i]);
-			} */
-
-			let slideIndex = 0;
-
-			function showSlide(n) {
-				const slides = document.querySelectorAll(".slider img");
-				if (n >= slides.length) {
-					slideIndex = 0;
-				}
-				if (n < 0) {
-					slideIndex = slides.length - 1;
-				}
-				for (let i = 0; i < slides.length; i++) {
-					slides[i].style.transform = `translateX(${-slideIndex * 100}%)`;
-					// slides[i].style.marginLeft = `-${slideIndex * 100}%`;
-				}
-			}
-
-			function nextSlide() {
-				showSlide(++slideIndex);
-			}
-
-			function prevSlide() {
-				showSlide(--slideIndex);
-			}
-
-			showSlide(slideIndex);
-
-			function autoSlide() {
-				nextSlide();
-			}
-
-			setInterval(autoSlide, 2000);
-
-			// Set the target date and time for the countdown (in UTC milliseconds)
-			const targetDate = new Date("2024-08-03T00:00:00+05:30").getTime();
-
-			// Update the countdown every second
-			const timerInterval = setInterval(updateCountdown, 1000);
-
-			function updateCountdown() {
-				// Get the current date and time (in UTC milliseconds)
-				const now = new Date().getTime();
-
-				// Calculate the remaining time in milliseconds
-				const remainingTime = targetDate - now;
-
-				// Check if the countdown has ended
-				if (remainingTime <= 0) {
-					clearInterval(timerInterval); // Stop the countdown timer
-					document.getElementById("timer").innerHTML = "Wait is over!";
-					return;
-				}
-
-				// Convert remaining time from milliseconds to days, hours, minutes, and seconds
-				const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
-				const hours = Math.floor(
-					(remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-				);
-				const minutes = Math.floor(
-					(remainingTime % (1000 * 60 * 60)) / (1000 * 60)
-				);
-				const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
-
-				// Display the remaining time in the HTML element
-				document.getElementById(
-					"timer"
-				).innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-			}
-
-			// $(".bxslider").bxSlider({
-			// 	auto: true,
-			// 	autoControls: true,
-			// 	stopAutoOnClick: true,
-			// 	pager: true,
-			// 	slideWidth: 600,
-			// });
-
-			// document.querySelectorAll("div#a .bx-wrapper")[0].style.maxWidth =
-			// 	"600px";
-			// document.querySelectorAll("div#a .bx-wrapper")[0].style.position =
-			// 	"absolute";
-			// document.querySelectorAll("div#a .bx-wrapper")[0].style.zIndex = "10";
-			// document.querySelectorAll("div#a .bx-wrapper")[0].style.top = "52%";
-			// document.querySelectorAll("div#a .bx-wrapper")[0].style.left = "50%";
-			// document.querySelectorAll("div#a .bx-wrapper")[0].style.transform =
-			// 	"translateX(-50%)";
-		</script>
-	</body>
 </html>
