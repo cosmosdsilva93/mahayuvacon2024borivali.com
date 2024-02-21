@@ -25,7 +25,7 @@
 		<div class="custom-nav">
 			<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light"> -->
 			<!-- <div class="container-fluid"> -->
-			<div class="row" id="desktop-only">
+			<div class="row desktop-only">
 				<div class="col-lg-2 col-md-2">
 					<img src="./assets/img/nav/dared.svg" class="align-top float-end nav-side-elems" style="width:65%">
 				</div>
@@ -37,7 +37,7 @@
 						style="width: 45%;">
 				</div>
 			</div>
-			<div id="mobile-only">
+			<div class="mobile-only">
 				<div class="col-lg-2 col-md-2">
 					<img src="./assets/img/nav/dared.svg" class="align-top float-end nav-side-elems" style="width:65%">
 				</div>
@@ -53,20 +53,40 @@
 		<!-- </nav> -->
 		<div class="container">
 			<div class="row" align="center">
-				<div class="col-md-12">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 					<img src="./assets/img/event/mahayu.svg" id="event-name" class="d-inline-block">
 				</div>
-				<div class="col-md-12">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 					<img src="./assets/img/event/date.svg" id="event-dates" class="d-inline-block">
 				</div>
 			</div>
 			<br>
-			<div class="row" align="center">
-				<div class="col-lg-2 col-md-2"></div>
+			<div class="mobile-only">
+				<div class="row" >
+					<div class="col-sm-6 col-6">
+						<img src="./assets/img/venue/venue.png" id="venue" class="d-inline-block" style="width:95%; margin: -10% 0 0 5%;">
+					</div>
+					<div class="col-sm-2 col-6">
+						<img src="./assets/img/venue/WORKSHOP.png" id="workshop" class="d-inline-block" style="width: 130%; margin:10% 0 0 -10%;">
+					</div>
+				</div>
+				<br>
+				<div class="row">
+					<div class="col-sm-12 col-12">
+						<div class="flipper" data-reverse="true" data-datetime="2024-08-02 00:00:00" data-template="ddd|HH|ii|ss" data-labels="Days|Hours|Minutes|Seconds" id="countdown-timer"></div>
+					</div>
+				</div>
+			</div>
+			<div class="row desktop-only" align="center">
+				<div class="col-lg-2 col-md-2">
+					<img src="./assets/img/venue/venue.png" id="venue" class="d-inline-block" style="width:110%; margin: -20% 0 0 -10%;">
+				</div>
 				<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
 					<div class="flipper" data-reverse="true" data-datetime="2024-08-02 00:00:00" data-template="ddd|HH|ii|ss" data-labels="Days|Hours|Minutes|Seconds" id="countdown-timer"></div>
 				</div>
-				<div class="col-md-2 col-md-2"></div>
+				<div class="col-lg-2 col-md-2">
+					<img src="./assets/img/venue/WORKSHOP.png" id="workshop" class="d-inline-block" style="width: 180%; margin-left: -40%;">
+				</div>
 			</div>
 			<div class="row" id="slider-container">
 				<div class="col-md-2"></div>

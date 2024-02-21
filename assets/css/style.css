@@ -1,7 +1,7 @@
 body {
     background-image: url('../img/bg.png');
     background-size: cover; /* Cover the entire background */
-    
+    background-repeat: repeat;
     height: 100vh; /* Set the height of the body to full viewport height */
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
@@ -16,12 +16,16 @@ body {
     padding-top: 1%;
 }
 
-#mobile-only{
+.mobile-only{
     display: none;
 }
 
 #slider-container{
     margin-top: 1%;
+}
+
+#mobile-venues{
+    display:none;
 }
 
 @media (max-width: 767px) {
@@ -37,15 +41,23 @@ body {
         width: 100%;
     }
     
-    #desktop-only{
+    .desktop-only{
         display: none;
     }
 
-    #mobile-only{
+    .mobile-only{
         display: block;
     }
 
     #slider-container{
         margin-top: 5%;
+    }
+
+    #desktop-venues{
+        display: none;
+    }
+
+    #mobile-venues{
+        display: block;
     }
 }
