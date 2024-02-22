@@ -28,6 +28,35 @@ body {
     display:none;
 }
 
+.boom-img {
+    background-image: url('../img/activities/boom.png');
+    background-size: cover; /* Cover the entire background */
+    /* background-repeat: repeat; */
+    height: 65%; /* Set the height of the body to full viewport height */
+    margin: 20% 0 0 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.smoke-img {
+    background-image: url('../img/activities/smoke.png');
+    background-size: cover; /* Cover the entire background */
+    /* background-repeat: repeat; */
+    height: 65%; /* Set the height of the body to full viewport height */
+    margin: 20% 0 0 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.explos-img {
+    text-align: center;
+    padding-top: 30%;
+}
+
+.assured-img {
+    text-align: center;
+    padding-top: 30%;
+    width: 60%;
+}
+
 @media (max-width: 767px) {
     body {
         background-position: center center; /* Center the background image */
