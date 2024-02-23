@@ -37,6 +37,15 @@ body {
     padding: 0; /* Remove default padding */
 }
 
+.explos-img {
+    text-align: center;
+    padding-top: 30%;
+}
+
+.vs-cropped-img{
+    width: 30%;
+}
+
 .smoke-img {
     background-image: url('../img/activities/smoke.png');
     background-size: cover; /* Cover the entire background */
@@ -46,15 +55,133 @@ body {
     padding: 0; /* Remove default padding */
 }
 
-.explos-img {
-    text-align: center;
-    padding-top: 30%;
-}
-
 .assured-img {
     text-align: center;
     padding-top: 30%;
     width: 60%;
+}
+
+.cloud-o {
+    background-image: url('../img/activities/cloud-o.png');
+    background-size: cover; /* Cover the entire background */
+    /* background-repeat: repeat; */
+    height: 150%; /* Set the height of the body to full viewport height */
+    /* margin: 20% 0 0 0; Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.handson-img {
+    text-align: center;
+    padding-top: 30%;
+    width: 50%;
+}
+
+.quiz-2-img {
+    background-image: url('../img/activities/quiz-2.png');
+    background-size: cover; /* Cover the entire background */
+    /* background-repeat: repeat; */
+    height: 140%; /* Set the height of the body to full viewport height */
+    /* margin: 20% 0 0 0; Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.cloud-img {
+    background-image: url('../img/activities/cloud.png');
+    background-size: cover; /* Cover the entire background */
+    /* background-repeat: repeat; */
+    height: 110%; /* Set the height of the body to full viewport height */
+    /* margin: 20% 0 0 0; Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.interec-img {
+    text-align: center;
+    padding-top: 20%;
+    width: 50%;
+}
+
+.register-title {
+    width:70%
+}
+
+.pricing {
+    width:90%
+}
+
+.registration-div {
+    margin-top: 10%;
+}
+
+.register-terms, .register-neft {
+    width:110%;
+    padding-top: 50%;
+}
+
+.super-man{
+    width: 70%;
+}
+
+.bang-img {
+    background-image: url('../img/super-section/bang.svg');
+    background-size: cover; /* Cover the entire background */
+    /* background-repeat: repeat; */
+    height: 93%; /* Set the height of the body to full viewport height */
+    /* margin: 20% 0 0 0; Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.submit-img{
+    width: 50%;
+    padding: 35% 0 0 5%
+}
+
+.sides-img {
+    background-image: url('../img/super-section/sides.svg');
+    background-size: cover; /* Cover the entire background */
+    /* background-repeat: repeat; */
+    height: 33%; /* Set the height of the body to full viewport height */
+    /* margin: 20% 0 0 0; Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.sides-img p {
+    font-size: 60%;
+    color: #ffffff;
+    padding-top: 14%;
+    margin-top: 10%;
+}
+
+.priyad-img{
+    width: 100%;
+    /* padding: 35% 0 0 5% */
+}
+
+.team-members {
+    padding-top: 5%;
+}
+
+.team-img{
+    width:100%;
+}
+
+li {
+    background-color: #FCD00E;
+    margin: 1% 4% 0 0;
+    font-size: 12px;
+}
+
+.flash-img {
+    background-image: url('../img/team/flash.svg');
+    background-size: cover; /* Cover the entire background */
+    /* background-repeat: repeat; */
+    height: 75%; /* Set the height of the body to full viewport height */
+    /* margin: 20% 0 0 0; Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.contact-img{
+    margin: 28% 0 0 5%;
+    width:45%;
 }
 
 @media (max-width: 767px) {
@@ -79,7 +206,7 @@ body {
     }
 
     #slider-container{
-        margin-top: 5%;
+        margin-top: 10%;
     }
 
     #desktop-venues{
@@ -88,5 +215,51 @@ body {
 
     #mobile-venues{
         display: block;
+    }
+    .boom-img{
+        margin: -10% 0 0 0;
+        height: auto;
+    }
+    .smoke-img{
+        height: 100%;
+        margin: 0
+    }
+    .vs-cropped-img{
+        width: 40%;
+    }
+    .registration-div {
+        margin-top: 5%;
+    }
+    .quiz-img {
+        padding-top: 30%;
+        width: 100%;
+    }
+    .register-terms {
+        width: 95%;
+        padding-top: 15%;
+    }
+    .sides-img{
+        height: 110%;
+        margin-top: -5%;
+    }
+    .team-members{
+        padding-top: 5%;
+    }
+    .flash-img {
+        height: 150%;
+    }
+    footer .container {
+        margin-top: 20%;
+    }
+    .priyad-img {
+        padding: 20% 0 0 5%
+    }
+    .bang-img{
+        width:100%;
+        margin: 10% 0 0 5%
+    }
+    .submit-img{
+        margin: 36% 0 0 28%;
+        padding: 0;
     }
 }
