@@ -139,16 +139,17 @@ body {
     background-image: url('../img/super-section/sides.svg');
     background-size: cover; /* Cover the entire background */
     /* background-repeat: repeat; */
-    height: 33%; /* Set the height of the body to full viewport height */
+    height: 30%; /* Set the height of the body to full viewport height */
     /* margin: 20% 0 0 0; Remove default margin */
     padding: 0; /* Remove default padding */
 }
 
 .sides-img p {
-    font-size: 60%;
+    font-size: 72%;
     color: #ffffff;
-    padding-top: 14%;
-    margin-top: 10%;
+    padding-top: 11%;
+    margin-top: 15%;
+    width: 50%;
 }
 
 .priyad-img{
@@ -164,7 +165,7 @@ body {
     width:100%;
 }
 
-li {
+footer li {
     background-color: #FCD00E;
     margin: 1% 4% 0 0;
     font-size: 12px;
@@ -235,12 +236,18 @@ li {
         width: 100%;
     }
     .register-terms {
-        width: 95%;
+        width: 110%;
         padding-top: 15%;
     }
     .sides-img{
         height: 110%;
-        margin-top: -5%;
+        /* margin-top: -5%; */
+    }
+    .sides-img p {
+        font-size: 60%;
+        padding-top: 10%;
+        margin-top: 5%;
+        width: 50%;
     }
     .team-members{
         padding-top: 5%;
@@ -262,4 +269,10 @@ li {
         margin: 36% 0 0 28%;
         padding: 0;
     }
+    .neft-box{
+        width:110%;
+    }
+    /* footer .container{
+        margin-top: 0;
+    } */
 }
