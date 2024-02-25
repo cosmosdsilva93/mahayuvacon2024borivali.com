@@ -2057,10 +2057,10 @@ footer {
 	margin-right: 10px;
 	margin-bottom: 15px;
 	border-radius: 4px;
-	/* border: 1px solid rgba(255, 254, 254, 0.07); */
+	border: 1px solid rgba(255, 254, 254, 0.07);
 	line-height: 40px;
-	/* width: 40px;
-  height: 40px; */
+	width: 40px;
+  	height: 40px; 
 	text-align: center;
 	font-size: 14px;
 }
@@ -2070,7 +2070,7 @@ footer {
 	color: #4867aa;
 }
 
-.social-icons-footer .twitter a:hover {
+.social-icons-footer .twitter a {
 	border-color: #1da1f2;
 	color: #1da1f2;
 }
@@ -2080,9 +2080,9 @@ footer {
 	color: #0077b5;
 }
 
-.social-icons-footer .google a:hover {
-	border-color: #ea4335;
-	color: #ea4335;
+.social-icons-footer .instagram a {
+	border-color: #A130B9;
+	color: #A130B9;
 }
 
 .social-icons-footer .pinterest a:hover {
