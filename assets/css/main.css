@@ -2390,7 +2390,7 @@ footer {
 3. Hero Area
 ========================================================================== */
 .hero-area-bg {
-	background: url(../img/venue/gcc-club.jpeg) no-repeat;
+	background: url(../img/gcc-club-day.jpeg) no-repeat;
 	background-size: cover;
 }
 
@@ -2406,7 +2406,7 @@ footer {
 	height: 100%;
 	top: 0px;
 	left: 0px;
-	background: rgba(0, 0, 0, 0.7);
+	background: rgba(0, 0, 0, 0.4);
 }
 
 #hero-area .contents {
